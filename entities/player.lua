@@ -7,6 +7,7 @@ local player = Class{
 
 function player:init(world, x, y)
   self.img = love.graphics.newImage('/assets/character_block.png')
+  self.sprite = GetInstance ("animations/LavamanSprite.lua")
 
   Entity.init(self, world, x, y, self.img:getWidth(), self.img:getHeight())
 
@@ -43,11 +44,14 @@ function player:update(dt)
 
   -- Move the player while testing for collisions
   self.x, self.y, collisions, len = self.world:move(self, goalX, goalY, self.collisionFilter)
+
+  -- Update sprites
+  UpdateInstance(self.sprite, dt)
 end
 
 function player:draw()
-  love.graphics.draw(self.img, self.x, self.y)
-  love.graphics.rectangle('line', self:getRect())
+  DrawInstance (self.sprite, self.x, self.y)
+  -- love.graphics.rectangle('line', self:getRect())
 end
 
 return player

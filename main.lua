@@ -4,6 +4,8 @@ bump = require 'libs.bump.bump'
 -- Pull in Gamestate from the HUMP library
 Gamestate = require 'libs.hump.gamestate'
 
+require "animations.AnimatedSprite"
+
 -- Pull in each of our game states
 local mainMenu = require 'gamestates.mainmenu'
 local gameLevel1 = require 'gamestates.gameLevel1'
