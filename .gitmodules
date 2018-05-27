@@ -1,0 +1,9 @@
+[submodule "libs/hump"]
+	path = libs/hump
+	url = git@github.com:vrld/hump
+[submodule "libs/bump"]
+	path = libs/bump
+	url = git@github.com:kikito/bump.lua
+[submodule "libs/sti"]
+	path = libs/sti
+	url = git@github.com:karai17/Simple-Tiled-Implementation.git
