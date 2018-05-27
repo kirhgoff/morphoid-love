@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.1.5" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="32" tileheight="32" infinite="0" nextobjectid="1">
+ <tileset firstgid="1" source="../mapPack_tilesheet.tsx"/>
+ <layer name="Sand" width="30" height="30">
+  <data encoding="base64" compression="zlib">
+   eJztk20KgCAMhj2M1U0qb9LHTSrv3AQHYxD4w70V+ONhvjIY+jDvnOuIvlIt7R2JiZgr1dLehViJTZ0Tu7qrmfm9F3EQZz4norqrmXl++vOB8MKBZZZ+AzCX+OBeK79PPrg35l6E3yBA+5WzkX6t99dyX9v+Nr/Nb/P7V79c0X65ov2ifH7F71v7i/KpM78b5Vf/M8ovz7sB14kvJA==
+  </data>
+ </layer>
+ <layer name="Rocks" width="30" height="30">
+  <data encoding="base64" compression="zlib">
+   eJyzY2RgsBsgrADEx4D4OBCfAOKTVOSji59CstcJiOkFbJHsTaGjvfFI9rbR0d5GJHtX0NHexSTErzRQXgaI5aFpkBJASvzC1DpSIQ2SEr+gsFkCxMupECeNJITzUWg+hOU/SsBiEsKZmsCWhHCmJkCOX3rmI1Lil5pgNH7pA0bjlz5gNH7pAwYqfm0HKH4Hyt7BkJ4Hqj0pA8WyQCwHbTfKEBCHiWGTx8dXQLJ3IDAA78VT0w==
+  </data>
+ </layer>
+ <layer name="corners" width="30" height="30">
+  <data encoding="base64" compression="zlib">
+   eJzt10ENACAMBMFWB/6l8EEVBnhfQzJjYN9bNWd3rrWCLQAA4F8n+A7JJ3q5HcsCdA==
+  </data>
+ </layer>
+</map>
