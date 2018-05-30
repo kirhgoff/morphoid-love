@@ -1,3 +1,4 @@
+-- TODO make a class
 camera = {}
 camera.x = 0
 camera.y = 0

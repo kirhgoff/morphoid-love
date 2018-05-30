@@ -1,3 +1,5 @@
+-- TODO make it generic
+
 -- Import our libraries.
 local Gamestate = require 'libs.hump.gamestate'
 local Class = require 'libs.hump.class'
@@ -6,7 +8,9 @@ local Class = require 'libs.hump.class'
 local LevelBase = require 'gamestates.LevelBase'
 
 -- Import the Entities we will build.
-local Player = require 'entities.player'
+local Player = require 'entities.Player'
+local Monster = require 'entities.Monster'
+
 local camera = require 'libs.camera'
 
 -- Declare a couple immportant variables
@@ -22,7 +26,9 @@ end
 
 function gameLevel1:enter()
   player = Player(self.world,  400, 400) -- self.world.width/2, self.world.height/2)
+  monster = Monster(self.world, 100, 100, "bat", "Idle")
   LevelBase.Entities:add(player)
+  LevelBase.Entities:add(monster)
 end
 
 function gameLevel1:update(dt)

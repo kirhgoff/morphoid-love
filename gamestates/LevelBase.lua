@@ -15,7 +15,6 @@ local LevelBase = Class{
     self.map = sti(mapFile, { 'bump' })
     self.world = bump.newWorld(32)
     self.map:resize(love.graphics.getWidth(), love.graphics.getHeight())
-
     self.map:bump_init(self.world)
 
     Entities:enter()

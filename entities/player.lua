@@ -1,11 +1,11 @@
 local Class = require 'libs.hump.class'
 local Entity = require 'entities.Entity'
 
-local player = Class{
+local Player = Class{
   __includes = Entity -- Player class inherits our Entity class
 }
 
-function player:init(world, x, y)
+function Player:init(world, x, y)
   self.img = love.graphics.newImage('/assets/character_block.png')
   self.sprite = GetInstance ("animations/LavamanSprite.lua")
 
@@ -21,7 +21,7 @@ function player:init(world, x, y)
   self.world:add(self, self:getRect())
 end
 
-function player:update(dt)
+function Player:update(dt)
   local prevX, prevY = self.x, self.y
 
   -- Apply Friction
@@ -49,9 +49,9 @@ function player:update(dt)
   UpdateInstance(self.sprite, dt)
 end
 
-function player:draw()
+function Player:draw()
   DrawInstance (self.sprite, self.x, self.y)
   -- love.graphics.rectangle('line', self:getRect())
 end
 
-return player
+return Player
