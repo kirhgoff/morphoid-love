@@ -7,9 +7,6 @@
 [submodule "libs/sti"]
 	path = libs/sti
 	url = git@github.com:karai17/Simple-Tiled-Implementation.git
-[submodule "libs/peachy"]
-	path = libs/peachy
-	url = git@github.com:josh-perry/peachy.git
 [submodule "libs/inspect"]
 	path = libs/inspect
 	url = git@github.com:kikito/inspect.lua.git
