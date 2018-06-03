@@ -10,8 +10,9 @@ local Monster = Class{
 function Monster:init(world, x, y, assetName, tag)
   -- print("Loading ["..jsonName.."], ["..imageName.."]") -- TODO optimise
   self.sprite = peachy.new("assets/"..assetName..".json", love.graphics.newImage("assets/"..assetName..".png"), tag)
-  _, _, w, h = self.sprite.frame.quad:getViewport()
-  Entity.init(self, world, x, y, w, h) 
+  -- _, _, w, h = self.sprite.frame.quad:getViewport()
+  _, _, w, h = self.sprite:getViewport()
+  Entity.init(self, world, x, y, self.sprite:getWidth(), self.sprite:getHeight()) 
   self.world:add(self, self:getRect())
 end
 

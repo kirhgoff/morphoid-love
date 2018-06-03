@@ -10,3 +10,6 @@
 [submodule "libs/inspect"]
 	path = libs/inspect
 	url = git@github.com:kikito/inspect.lua.git
+[submodule "libs/peachy"]
+	path = libs/peachy
+	url = git@github.com:kirhgoff/peachy.git
