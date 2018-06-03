@@ -19,6 +19,7 @@ local LevelBase = Class{
 
     Entities:enter()
   end,
+  
   Entities = Entities,
   camera = camera
 }

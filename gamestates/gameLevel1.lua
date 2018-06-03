@@ -13,7 +13,9 @@ local Monster = require 'entities.Monster'
 
 local camera = require 'libs.camera'
 
--- Declare a couple immportant variables
+local inspect = require 'libs.inspect.inspect'
+
+-- Declare a couple important variables
 player = nil
 
 local gameLevel1 = Class{
@@ -25,10 +27,13 @@ function gameLevel1:init()
 end
 
 function gameLevel1:enter()
-  player = Player(self.world,  400, 400) -- self.world.width/2, self.world.height/2)
-  monster = Monster(self.world, 100, 100, "bat", "Idle")
+  player = Player(self.world,  400, 400)
   LevelBase.Entities:add(player)
-  LevelBase.Entities:add(monster)
+  LevelBase.Entities:addMany({
+    Monster(self.world, 100, 100, "bat", "Idle"),
+    Monster(self.world, 500, 200, "bat", "Idle"),
+    Monster(self.world, 400, 500, "bat", "Idle")
+  })
 end
 
 function gameLevel1:update(dt)

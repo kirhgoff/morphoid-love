@@ -1,30 +1,26 @@
 local Class = require 'libs.hump.class'
 local Entity = require 'entities.Entity'
 local peachy = require 'libs.peachy.peachy'
+local inspect = require 'libs.inspect.inspect'
 
 local Monster = Class{
   __includes = Entity 
 }
 
 function Monster:init(world, x, y, assetName, tag)
-  jsonName = "assets/"..assetName..".json"
-  imageName = "assets/"..assetName..".png"
-  
-  print("Loading ["..jsonName.."], ["..imageName.."]")
-  self.sprite = peachy.new(jsonName, love.graphics.newImage(imageName), tag)
-
-  Entity.init(self, world, x, y, 16, 16) -- TODO find width and height
-
+  -- print("Loading ["..jsonName.."], ["..imageName.."]") -- TODO optimise
+  self.sprite = peachy.new("assets/"..assetName..".json", love.graphics.newImage("assets/"..assetName..".png"), tag)
+  _, _, w, h = self.sprite.frame.quad:getViewport()
+  Entity.init(self, world, x, y, w, h) 
   self.world:add(self, self:getRect())
 end
 
 function Monster:draw()
-  print("Monster:draw()")
   self.sprite:draw(self.x, self.y)
+  love.graphics.rectangle('line', self.x, self.y, self.w, self.h)
 end
 
-function Entity:update(dt)
-  print("Monster:update()")
+function Monster:update(dt)
   self.sprite:update(dt)
 end
 

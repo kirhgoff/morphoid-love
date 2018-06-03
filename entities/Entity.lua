@@ -4,6 +4,7 @@ local Class = require 'libs.hump.class'
 local Entity = Class{}
 
 function Entity:init(world, x, y, w, h)
+  self.name = '-'
   self.world = world
   self.x = x
   self.y = y
@@ -20,7 +21,7 @@ function Entity:draw()
 end
 
 function Entity:update(dt)
-  -- Do nothing by default, but we still have to have something to call
+  -- print("Entity.update(dt)"..self.name)
 end
 
 function Entity:keypressed(key)

@@ -1,6 +1,5 @@
 -- Represents a collection of drawable entities.  Each gamestate holds one of these.
 
-
 local Entities = {
 	active = true,
 	map = nil,
